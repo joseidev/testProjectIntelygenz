@@ -7,24 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45DB903927D3CE9D004B5A3A /* TestProjectInteligenzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903827D3CE9D004B5A3A /* TestProjectInteligenzApp.swift */; };
-		45DB903B27D3CE9D004B5A3A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903A27D3CE9D004B5A3A /* ListView.swift */; };
+		45DB903927D3CE9D004B5A3A /* Appview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903827D3CE9D004B5A3A /* Appview.swift */; };
+		45DB903B27D3CE9D004B5A3A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903A27D3CE9D004B5A3A /* MainView.swift */; };
 		45DB903D27D3CEA0004B5A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DB903C27D3CEA0004B5A3A /* Assets.xcassets */; };
 		45DB904027D3CEA0004B5A3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DB903F27D3CEA0004B5A3A /* Preview Assets.xcassets */; };
-		45DB904927D3D25A004B5A3A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB904827D3D25A004B5A3A /* Article.swift */; };
+		45DB904927D3D25A004B5A3A /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB904827D3D25A004B5A3A /* ArticleEntity.swift */; };
 		45DB904C27D3D364004B5A3A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB904B27D3D364004B5A3A /* Kingfisher */; };
 		45DB904F27D3D375004B5A3A /* ServicesLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB904E27D3D375004B5A3A /* ServicesLibrary */; };
 		45DB905227D3D66C004B5A3A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB905127D3D66C004B5A3A /* DetailView.swift */; };
+		45DB905727D3E18A004B5A3A /* InteligenzDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB905627D3E18A004B5A3A /* InteligenzDomain */; };
+		45DB905927D3E18F004B5A3A /* InteligenzServices in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB905827D3E18F004B5A3A /* InteligenzServices */; };
+		45DB906227D3E6F2004B5A3A /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906127D3E6F2004B5A3A /* DependencyResolver.swift */; };
+		45DB906427D3E723004B5A3A /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906327D3E723004B5A3A /* AppViewModel.swift */; };
+		45DB906627D3E791004B5A3A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906527D3E791004B5A3A /* MainViewModel.swift */; };
+		45DB906927D3E7CA004B5A3A /* FetchNewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906827D3E7CA004B5A3A /* FetchNewsUseCase.swift */; };
+		45DB906C27D40123004B5A3A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906B27D40123004B5A3A /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProjectInteligenz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		45DB903827D3CE9D004B5A3A /* TestProjectInteligenzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectInteligenzApp.swift; sourceTree = "<group>"; };
-		45DB903A27D3CE9D004B5A3A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		45DB903827D3CE9D004B5A3A /* Appview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appview.swift; sourceTree = "<group>"; };
+		45DB903A27D3CE9D004B5A3A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		45DB903C27D3CEA0004B5A3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45DB903F27D3CEA0004B5A3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		45DB904827D3D25A004B5A3A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		45DB904827D3D25A004B5A3A /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
 		45DB905127D3D66C004B5A3A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		45DB905D27D3E380004B5A3A /* InteligenzServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InteligenzServices; sourceTree = "<group>"; };
+		45DB905E27D3E38E004B5A3A /* InteligenzDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InteligenzDomain; sourceTree = "<group>"; };
+		45DB906127D3E6F2004B5A3A /* DependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
+		45DB906327D3E723004B5A3A /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		45DB906527D3E791004B5A3A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		45DB906827D3E7CA004B5A3A /* FetchNewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNewsUseCase.swift; sourceTree = "<group>"; };
+		45DB906B27D40123004B5A3A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +48,8 @@
 			files = (
 				45DB904F27D3D375004B5A3A /* ServicesLibrary in Frameworks */,
 				45DB904C27D3D364004B5A3A /* Kingfisher in Frameworks */,
+				45DB905727D3E18A004B5A3A /* InteligenzDomain in Frameworks */,
+				45DB905927D3E18F004B5A3A /* InteligenzServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,8 +59,10 @@
 		45DB902C27D3CE9C004B5A3A = {
 			isa = PBXGroup;
 			children = (
+				45DB905A27D3E284004B5A3A /* Packages */,
 				45DB903727D3CE9D004B5A3A /* TestProjectInteligenz */,
 				45DB903627D3CE9C004B5A3A /* Products */,
+				45DB905527D3E18A004B5A3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +77,7 @@
 		45DB903727D3CE9D004B5A3A /* TestProjectInteligenz */ = {
 			isa = PBXGroup;
 			children = (
-				45DB903827D3CE9D004B5A3A /* TestProjectInteligenzApp.swift */,
+				45DB906027D3E6DA004B5A3A /* Commons */,
 				45DB904627D3D23D004B5A3A /* Scenes */,
 				45DB903C27D3CEA0004B5A3A /* Assets.xcassets */,
 				45DB903E27D3CEA0004B5A3A /* Preview Content */,
@@ -78,6 +96,7 @@
 		45DB904627D3D23D004B5A3A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				45DB905F27D3E6D1004B5A3A /* App */,
 				45DB905027D3D658004B5A3A /* DetailView */,
 				45DB904727D3D245004B5A3A /* ListView */,
 			);
@@ -87,8 +106,11 @@
 		45DB904727D3D245004B5A3A /* ListView */ = {
 			isa = PBXGroup;
 			children = (
-				45DB903A27D3CE9D004B5A3A /* ListView.swift */,
-				45DB904827D3D25A004B5A3A /* Article.swift */,
+				45DB906A27D40117004B5A3A /* Views */,
+				45DB906727D3E7BB004B5A3A /* UseCases */,
+				45DB903A27D3CE9D004B5A3A /* MainView.swift */,
+				45DB906527D3E791004B5A3A /* MainViewModel.swift */,
+				45DB904827D3D25A004B5A3A /* ArticleEntity.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -99,6 +121,55 @@
 				45DB905127D3D66C004B5A3A /* DetailView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		45DB905527D3E18A004B5A3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45DB905A27D3E284004B5A3A /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				45DB905D27D3E380004B5A3A /* InteligenzServices */,
+				45DB905E27D3E38E004B5A3A /* InteligenzDomain */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		45DB905F27D3E6D1004B5A3A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				45DB903827D3CE9D004B5A3A /* Appview.swift */,
+				45DB906327D3E723004B5A3A /* AppViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		45DB906027D3E6DA004B5A3A /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				45DB906127D3E6F2004B5A3A /* DependencyResolver.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		45DB906727D3E7BB004B5A3A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				45DB906827D3E7CA004B5A3A /* FetchNewsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		45DB906A27D40117004B5A3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45DB906B27D40123004B5A3A /* ListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +191,8 @@
 			packageProductDependencies = (
 				45DB904B27D3D364004B5A3A /* Kingfisher */,
 				45DB904E27D3D375004B5A3A /* ServicesLibrary */,
+				45DB905627D3E18A004B5A3A /* InteligenzDomain */,
+				45DB905827D3E18F004B5A3A /* InteligenzServices */,
 			);
 			productName = TestProjectInteligenz;
 			productReference = 45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */;
@@ -179,10 +252,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45DB903B27D3CE9D004B5A3A /* ListView.swift in Sources */,
+				45DB906227D3E6F2004B5A3A /* DependencyResolver.swift in Sources */,
+				45DB906927D3E7CA004B5A3A /* FetchNewsUseCase.swift in Sources */,
+				45DB903B27D3CE9D004B5A3A /* MainView.swift in Sources */,
+				45DB906627D3E791004B5A3A /* MainViewModel.swift in Sources */,
+				45DB906427D3E723004B5A3A /* AppViewModel.swift in Sources */,
 				45DB905227D3D66C004B5A3A /* DetailView.swift in Sources */,
-				45DB903927D3CE9D004B5A3A /* TestProjectInteligenzApp.swift in Sources */,
-				45DB904927D3D25A004B5A3A /* Article.swift in Sources */,
+				45DB903927D3CE9D004B5A3A /* Appview.swift in Sources */,
+				45DB904927D3D25A004B5A3A /* ArticleEntity.swift in Sources */,
+				45DB906C27D40123004B5A3A /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +491,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 45DB904D27D3D375004B5A3A /* XCRemoteSwiftPackageReference "servicesLibrary" */;
 			productName = ServicesLibrary;
+		};
+		45DB905627D3E18A004B5A3A /* InteligenzDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InteligenzDomain;
+		};
+		45DB905827D3E18F004B5A3A /* InteligenzServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InteligenzServices;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

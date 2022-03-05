@@ -9,14 +9,14 @@ import SwiftUI
 import Kingfisher
 
 struct DetailView: View {
-    let article: Article
+    let article: ArticleEntity
     var body: some View {
         VStack(alignment: .leading) {
             Text(article.title)
                 .font(.system(size: 16, weight: .bold, design: .default))
                 .foregroundColor(.black)
                 .padding(.bottom, 8)
-            KFImage(URL(string: article.urlToImage)!)
+            KFImage(article.urlToImage)
                 .cacheMemoryOnly()
                 .resizable()
                 .frame(height: 120, alignment: .center)

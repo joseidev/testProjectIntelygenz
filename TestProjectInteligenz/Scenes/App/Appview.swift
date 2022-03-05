@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct TestProjectInteligenzApp: App {
+struct AppView: App {
+    
+    @StateObject var viewModel = AppViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ListView()
+            MainView()
         }
     }
 }
