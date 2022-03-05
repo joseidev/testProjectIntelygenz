@@ -11,22 +11,19 @@ import Kingfisher
 struct ListView: View {
     private let articles: [ArticleEntity]
     @State var navigateToDetail = false
-    @State var selectedArticle = ArticleEntity(
-        id: UUID().uuidString,
-        title: "",
-        description: "",
-        url: URL(string: "https://google.es")!,
-        urlToImage: URL(string: "https://google.es")!,
-        date: Date())
+    @State var selectedArticle: ArticleEntity?
     
     init(articles: [ArticleEntity]) {
         self.articles = articles
     }
     
     var body: some View {
-        NavigationLink(isActive: $navigateToDetail,
-                       destination: { DetailView(article: selectedArticle) },
-                       label: { EmptyView() })
+        if let selected = selectedArticle {
+            NavigationLink(isActive: $navigateToDetail,
+                           destination: { DetailView(article: selected) },
+                           label: { EmptyView() })
+
+        }
         List(articles, id: \.id) { item in
             Button(action: {
                 selectedArticle = item
