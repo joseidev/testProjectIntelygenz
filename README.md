@@ -58,7 +58,3 @@ With each network request the stored data is udpated. If is not possible to obta
 
 ## Testing
 The project contains unit tests for view model and use case. Mocks are injected for dependencies allowing to test the objects isolated.
-
-## Demo
-
-![Demo](Demo.mov)
