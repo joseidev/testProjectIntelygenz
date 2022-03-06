@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451E9F1727D51914006B4581 /* InteligenzDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 451E9F1627D51914006B4581 /* InteligenzDomain */; };
 		45DB903927D3CE9D004B5A3A /* Appview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903827D3CE9D004B5A3A /* Appview.swift */; };
 		45DB903B27D3CE9D004B5A3A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903A27D3CE9D004B5A3A /* MainView.swift */; };
 		45DB903D27D3CEA0004B5A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DB903C27D3CEA0004B5A3A /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		45DB904C27D3D364004B5A3A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB904B27D3D364004B5A3A /* Kingfisher */; };
 		45DB904F27D3D375004B5A3A /* ServicesLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB904E27D3D375004B5A3A /* ServicesLibrary */; };
 		45DB905227D3D66C004B5A3A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB905127D3D66C004B5A3A /* DetailView.swift */; };
-		45DB905727D3E18A004B5A3A /* InteligenzDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB905627D3E18A004B5A3A /* InteligenzDomain */; };
 		45DB905927D3E18F004B5A3A /* InteligenzServices in Frameworks */ = {isa = PBXBuildFile; productRef = 45DB905827D3E18F004B5A3A /* InteligenzServices */; };
 		45DB906227D3E6F2004B5A3A /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906127D3E6F2004B5A3A /* DependencyResolver.swift */; };
 		45DB906427D3E723004B5A3A /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906327D3E723004B5A3A /* AppViewModel.swift */; };
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450BF0AD27D51890004FD533 /* InteligenzDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InteligenzDomain; sourceTree = "<group>"; };
 		45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProjectInteligenz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DB903827D3CE9D004B5A3A /* Appview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appview.swift; sourceTree = "<group>"; };
 		45DB903A27D3CE9D004B5A3A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		45DB904827D3D25A004B5A3A /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
 		45DB905127D3D66C004B5A3A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		45DB905D27D3E380004B5A3A /* InteligenzServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InteligenzServices; sourceTree = "<group>"; };
-		45DB905E27D3E38E004B5A3A /* InteligenzDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InteligenzDomain; sourceTree = "<group>"; };
 		45DB906127D3E6F2004B5A3A /* DependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
 		45DB906327D3E723004B5A3A /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		45DB906527D3E791004B5A3A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DB904F27D3D375004B5A3A /* ServicesLibrary in Frameworks */,
+				451E9F1727D51914006B4581 /* InteligenzDomain in Frameworks */,
 				45DB904C27D3D364004B5A3A /* Kingfisher in Frameworks */,
-				45DB905727D3E18A004B5A3A /* InteligenzDomain in Frameworks */,
 				45DB905927D3E18F004B5A3A /* InteligenzServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				45DB905D27D3E380004B5A3A /* InteligenzServices */,
-				45DB905E27D3E38E004B5A3A /* InteligenzDomain */,
+				450BF0AD27D51890004FD533 /* InteligenzDomain */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -241,8 +241,8 @@
 			packageProductDependencies = (
 				45DB904B27D3D364004B5A3A /* Kingfisher */,
 				45DB904E27D3D375004B5A3A /* ServicesLibrary */,
-				45DB905627D3E18A004B5A3A /* InteligenzDomain */,
 				45DB905827D3E18F004B5A3A /* InteligenzServices */,
+				451E9F1627D51914006B4581 /* InteligenzDomain */,
 			);
 			productName = TestProjectInteligenz;
 			productReference = 45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */;
@@ -625,6 +625,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		451E9F1627D51914006B4581 /* InteligenzDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InteligenzDomain;
+		};
 		45DB904B27D3D364004B5A3A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 45DB904A27D3D364004B5A3A /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -634,10 +638,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 45DB904D27D3D375004B5A3A /* XCRemoteSwiftPackageReference "servicesLibrary" */;
 			productName = ServicesLibrary;
-		};
-		45DB905627D3E18A004B5A3A /* InteligenzDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = InteligenzDomain;
 		};
 		45DB905827D3E18F004B5A3A /* InteligenzServices */ = {
 			isa = XCSwiftPackageProductDependency;

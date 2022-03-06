@@ -23,7 +23,7 @@ final class CoreDataRepository {
     }()
     
     func save(articles: [ArticleRepresentable]) throws {
-        let managedContext = persistentContainer.viewContext
+        let managedContext = persistentContainer.newBackgroundContext()
         try articles.forEach { article in
             guard let entity = NSEntityDescription.entity(forEntityName: "ArticleEntity", in: managedContext) else { throw CoreDataError.generic }
             let articleEntity = NSManagedObject(entity: entity, insertInto: managedContext)
@@ -32,8 +32,8 @@ final class CoreDataRepository {
             articleEntity.setValue(article.url, forKeyPath: "url")
             articleEntity.setValue(article.urlToImage, forKeyPath: "urlToImage")
             articleEntity.setValue(article.date, forKeyPath: "date")
-            try managedContext.save()            
         }
+        try managedContext.save()
     }
     
     func getArticles() throws -> [ArticleRepresentable] {
@@ -57,7 +57,7 @@ final class CoreDataRepository {
 
     
     func deleteArticles() throws {
-        let managedContext = persistentContainer.viewContext
+        let managedContext = persistentContainer.newBackgroundContext()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ArticleEntity")
         fetchRequest.returnsObjectsAsFaults = false
         let results = try managedContext.fetch(fetchRequest)
