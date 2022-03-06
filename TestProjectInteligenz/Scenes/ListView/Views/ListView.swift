@@ -34,6 +34,7 @@ struct ListView: View {
                                 .frame(width: 80, height: 60, alignment: .center)
                         }
                         .resizable()
+                        .cornerRadius(6)
                         .frame(width: 90, height: 60, alignment: .center)
                     VStack(alignment: .leading) {
                         Text(item.title)

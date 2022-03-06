@@ -22,7 +22,22 @@
 		45DB906627D3E791004B5A3A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906527D3E791004B5A3A /* MainViewModel.swift */; };
 		45DB906927D3E7CA004B5A3A /* FetchNewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906827D3E7CA004B5A3A /* FetchNewsUseCase.swift */; };
 		45DB906C27D40123004B5A3A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB906B27D40123004B5A3A /* ListView.swift */; };
+		45DB907427D50C86004B5A3A /* FetchNewsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB907327D50C86004B5A3A /* FetchNewsUseCaseTests.swift */; };
+		45DB907C27D50CDC004B5A3A /* MockNewsAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB907B27D50CDC004B5A3A /* MockNewsAPIRepository.swift */; };
+		45DB907E27D50DEF004B5A3A /* MockRepositoriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB907D27D50DEF004B5A3A /* MockRepositoriesProvider.swift */; };
+		45DB908027D50E6A004B5A3A /* MockFetchNewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB907F27D50E6A004B5A3A /* MockFetchNewsUseCase.swift */; };
+		45DB908227D51111004B5A3A /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB908127D51111004B5A3A /* MainViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45DB907527D50C86004B5A3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DB902D27D3CE9C004B5A3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45DB903427D3CE9C004B5A3A;
+			remoteInfo = TestProjectInteligenz;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProjectInteligenz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +54,12 @@
 		45DB906527D3E791004B5A3A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		45DB906827D3E7CA004B5A3A /* FetchNewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNewsUseCase.swift; sourceTree = "<group>"; };
 		45DB906B27D40123004B5A3A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		45DB907127D50C86004B5A3A /* TestProjectInteligenzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectInteligenzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45DB907327D50C86004B5A3A /* FetchNewsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNewsUseCaseTests.swift; sourceTree = "<group>"; };
+		45DB907B27D50CDC004B5A3A /* MockNewsAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsAPIRepository.swift; sourceTree = "<group>"; };
+		45DB907D27D50DEF004B5A3A /* MockRepositoriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoriesProvider.swift; sourceTree = "<group>"; };
+		45DB907F27D50E6A004B5A3A /* MockFetchNewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchNewsUseCase.swift; sourceTree = "<group>"; };
+		45DB908127D51111004B5A3A /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +74,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45DB906E27D50C86004B5A3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +89,7 @@
 			children = (
 				45DB905A27D3E284004B5A3A /* Packages */,
 				45DB903727D3CE9D004B5A3A /* TestProjectInteligenz */,
+				45DB907227D50C86004B5A3A /* TestProjectInteligenzTests */,
 				45DB903627D3CE9C004B5A3A /* Products */,
 				45DB905527D3E18A004B5A3A /* Frameworks */,
 			);
@@ -70,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */,
+				45DB907127D50C86004B5A3A /* TestProjectInteligenzTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +202,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		45DB907227D50C86004B5A3A /* TestProjectInteligenzTests */ = {
+			isa = PBXGroup;
+			children = (
+				45DB907A27D50C92004B5A3A /* Mocks */,
+				45DB907327D50C86004B5A3A /* FetchNewsUseCaseTests.swift */,
+				45DB908127D51111004B5A3A /* MainViewModelTests.swift */,
+			);
+			path = TestProjectInteligenzTests;
+			sourceTree = "<group>";
+		};
+		45DB907A27D50C92004B5A3A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				45DB907B27D50CDC004B5A3A /* MockNewsAPIRepository.swift */,
+				45DB907F27D50E6A004B5A3A /* MockFetchNewsUseCase.swift */,
+				45DB907D27D50DEF004B5A3A /* MockRepositoriesProvider.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +248,24 @@
 			productReference = 45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */;
 			productType = "com.apple.product-type.application";
 		};
+		45DB907027D50C86004B5A3A /* TestProjectInteligenzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45DB907727D50C86004B5A3A /* Build configuration list for PBXNativeTarget "TestProjectInteligenzTests" */;
+			buildPhases = (
+				45DB906D27D50C86004B5A3A /* Sources */,
+				45DB906E27D50C86004B5A3A /* Frameworks */,
+				45DB906F27D50C86004B5A3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45DB907627D50C86004B5A3A /* PBXTargetDependency */,
+			);
+			name = TestProjectInteligenzTests;
+			productName = TestProjectInteligenzTests;
+			productReference = 45DB907127D50C86004B5A3A /* TestProjectInteligenzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +278,10 @@
 				TargetAttributes = {
 					45DB903427D3CE9C004B5A3A = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					45DB907027D50C86004B5A3A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 45DB903427D3CE9C004B5A3A;
 					};
 				};
 			};
@@ -231,6 +303,7 @@
 			projectRoot = "";
 			targets = (
 				45DB903427D3CE9C004B5A3A /* TestProjectInteligenz */,
+				45DB907027D50C86004B5A3A /* TestProjectInteligenzTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +315,13 @@
 			files = (
 				45DB904027D3CEA0004B5A3A /* Preview Assets.xcassets in Resources */,
 				45DB903D27D3CEA0004B5A3A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45DB906F27D50C86004B5A3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +344,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45DB906D27D50C86004B5A3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DB907427D50C86004B5A3A /* FetchNewsUseCaseTests.swift in Sources */,
+				45DB907C27D50CDC004B5A3A /* MockNewsAPIRepository.swift in Sources */,
+				45DB907E27D50DEF004B5A3A /* MockRepositoriesProvider.swift in Sources */,
+				45DB908027D50E6A004B5A3A /* MockFetchNewsUseCase.swift in Sources */,
+				45DB908227D51111004B5A3A /* MainViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45DB907627D50C86004B5A3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45DB903427D3CE9C004B5A3A /* TestProjectInteligenz */;
+			targetProxy = 45DB907527D50C86004B5A3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		45DB904127D3CEA0004B5A3A /* Debug */ = {
@@ -439,6 +539,40 @@
 			};
 			name = Release;
 		};
+		45DB907827D50C86004B5A3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.joseignacio.TestProjectInteligenzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProjectInteligenz.app/TestProjectInteligenz";
+			};
+			name = Debug;
+		};
+		45DB907927D50C86004B5A3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.joseignacio.TestProjectInteligenzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProjectInteligenz.app/TestProjectInteligenz";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,6 +590,15 @@
 			buildConfigurations = (
 				45DB904427D3CEA0004B5A3A /* Debug */,
 				45DB904527D3CEA0004B5A3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45DB907727D50C86004B5A3A /* Build configuration list for PBXNativeTarget "TestProjectInteligenzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45DB907827D50C86004B5A3A /* Debug */,
+				45DB907927D50C86004B5A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,10 +20,8 @@ struct DetailView: View {
                 KFImage(article.urlToImage)
                     .cacheMemoryOnly()
                     .resizable()
-                    .frame(
-                        width: geometry.size.width,
-                        height: geometry.size.width * 0.66,
-                        alignment: .center)
+                    .scaledToFit()
+                    .cornerRadius(10)
                     .padding(.bottom, 16)
                 Text(article.description)
                     .font(.system(size: 12, weight: .regular, design: .default))
