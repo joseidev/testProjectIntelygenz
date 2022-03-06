@@ -12,9 +12,11 @@ import Combine
 
 final class NewsApiRepository {
     let networkClientManager: NetworkClientManager
+    private let coreDataRepository: CoreDataRepository
     
-    init(networkClientManager: NetworkClientManager) {
+    init(networkClientManager: NetworkClientManager, coreDataRepository: CoreDataRepository) {
         self.networkClientManager = networkClientManager
+        self.coreDataRepository = coreDataRepository
     }
 }
 
@@ -59,15 +61,24 @@ extension NewsApiRepository: NewsRepository {
                 .map(\.data)
                 .mapError { $0 as Error }
                 .decode(type: NewsDTO.self, decoder: decoder)
-                .map { news in
+                .tryMap { [unowned self] news in
                     let articles = news.articles.filter { $0.publishedAt != nil }
                     let representables: [ArticleRepresentable] = articles
-                    return representables.filter { article in
+                    let filteredRepresentables = representables.filter { article in
                         return !article.title.isEmpty
                         && !article.description.isEmpty
                         && !article.url.isEmpty
                         && !article.urlToImage.isEmpty
                     }
+                    try self.coreDataRepository.deleteArticles()
+                    try self.coreDataRepository.save(articles: filteredRepresentables)
+                    return filteredRepresentables
+                }
+                .tryCatch { [unowned self] error -> AnyPublisher<[ArticleRepresentable], Error> in
+                    let articles = try self.coreDataRepository.getArticles()
+                    return Just(articles)
+                        .setFailureType(to: Error.self)
+                        .eraseToAnyPublisher()                    
                 }
                 .eraseToAnyPublisher()
         } catch {

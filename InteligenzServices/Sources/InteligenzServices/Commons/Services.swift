@@ -9,6 +9,11 @@ import InteligenzDomain
 public final class Services {
     
     let networkClientManager = NetworkClientManager(client: DefaultNetworkClient(configuration: Configuration()))
+    let coreDateRepostory = CoreDataRepository()
+    public lazy var newsRepository: NewsRepository = {
+        NewsApiRepository(networkClientManager: networkClientManager, coreDataRepository: coreDateRepostory)
+    }()
+
     
     public init() {}
 
@@ -23,8 +28,4 @@ private extension Services {
     }
 }
 
-extension Services: RepositoriesProvider {
-    public var newsRepository: NewsRepository {
-        NewsApiRepository(networkClientManager: networkClientManager)
-    }
-}
+extension Services: RepositoriesProvider { }
