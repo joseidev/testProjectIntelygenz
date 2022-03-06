@@ -9,13 +9,9 @@ import SwiftUI
 import Kingfisher
 
 struct ListView: View {
-    private let articles: [ArticleEntity]
     @State var navigateToDetail = false
     @State var selectedArticle: ArticleEntity?
-    
-    init(articles: [ArticleEntity]) {
-        self.articles = articles
-    }
+    @EnvironmentObject var viewModel: MainViewModel
     
     var body: some View {
         if let selected = selectedArticle {
@@ -24,7 +20,7 @@ struct ListView: View {
                            label: { EmptyView() })
 
         }
-        List(articles, id: \.id) { item in
+        List(viewModel.articlesToShow, id: \.id) { item in
             Button(action: {
                 selectedArticle = item
                 navigateToDetail = true
@@ -54,8 +50,12 @@ struct ListView: View {
                             .padding(.top, 4)
                     }
                 }
-                .frame(height: 80, alignment: .topLeading)
+                .frame(height: 85, alignment: .topLeading)
             })
         }
+        .refreshable {
+            viewModel.reloadData()
+        }
+        .searchable(text: $viewModel.searchQuery)
     }
 }

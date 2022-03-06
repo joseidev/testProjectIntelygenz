@@ -28,12 +28,12 @@ extension FetchNewsUseCase: FetchNewsUseCaseProtocol {
                               return nil
                           }
                     return ArticleEntity(
-                        id: UUID().uuidString,
+                        id: url.absoluteString,
                         title: representable.title,
                         description: representable.description,
                         url: url,
                         urlToImage: urlToImage,
-                        date: representable.date ?? Date())
+                        date: representable.date)
                 }
             }
             .map { entities in

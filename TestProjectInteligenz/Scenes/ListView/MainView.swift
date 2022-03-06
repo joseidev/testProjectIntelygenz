@@ -23,16 +23,17 @@ struct MainView: View {
                     Spacer()
                     Text(message)
                     Spacer()
-                case .resultsLoaded(let articles):
-                    if articles.isEmpty {
+                case .resultsLoaded(let isEmpty):
+                    if isEmpty {
                         Text("No articles availble, try later.")
                     } else {
-                        ListView(articles: articles)
+                        ListView()
                     }
                 }
 
             }
             .navigationTitle("Ukraine war news")
+            .environmentObject(viewModel)
         }
     }
 }

@@ -60,14 +60,13 @@ extension NewsApiRepository: NewsRepository {
                 .mapError { $0 as Error }
                 .decode(type: NewsDTO.self, decoder: decoder)
                 .map { news in
-                    let articles = news.articles
+                    let articles = news.articles.filter { $0.publishedAt != nil }
                     let representables: [ArticleRepresentable] = articles
                     return representables.filter { article in
                         return !article.title.isEmpty
                         && !article.description.isEmpty
                         && !article.url.isEmpty
                         && !article.urlToImage.isEmpty
-                        && article.date != nil
                     }
                 }
                 .eraseToAnyPublisher()

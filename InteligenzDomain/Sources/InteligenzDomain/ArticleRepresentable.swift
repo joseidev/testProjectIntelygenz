@@ -6,5 +6,5 @@ public protocol ArticleRepresentable {
     var description: String { get }
     var url: String { get }
     var urlToImage: String { get }
-    var date: Date? { get }
+    var date: Date { get }
 }

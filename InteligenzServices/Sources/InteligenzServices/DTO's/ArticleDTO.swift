@@ -45,9 +45,7 @@ extension ArticleDTO: ArticleRepresentable {
         return urlToImageDTO ?? ""
     }
     
-    var date: Date? {
-        return publishedAt
+    var date: Date {
+        return publishedAt ?? Date()
     }
-    
-    
 }
