@@ -23,7 +23,9 @@ struct ListView: View {
         List(viewModel.articlesToShow, id: \.id) { item in
             Button(action: {
                 selectedArticle = item
-                navigateToDetail = true
+                withAnimation {                    
+                    navigateToDetail = true
+                }
             }, label: {
                 HStack(alignment: .top) {
                     KFImage(item.urlToImage)

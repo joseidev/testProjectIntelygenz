@@ -51,10 +51,21 @@ For injection a property wrapper is used. This property wrapper access the share
 
 - [Kingfisher](https://github.com/onevcat/Kingfisher): This library handles the load of remote images.
 
+- [SnapShot-Testing](https://github.com/pointfreeco/swift-snapshot-testing): Library for UI testing. Takes a screnshot of a state of the view and uses as reference for following tests.
+
 ## Persistance
 To allow offline acceess to the last requested news the app is using Core Data.
 With each network request the stored data is udpated. If is not possible to obtain remote data the stored data is presented to the user.
 
 
 ## Testing
-The project contains unit tests for view model and use case. Mocks are injected for dependencies allowing to test the objects isolated.
+
+- Unit tests: The project contains unit tests for view model and use case. Mocks are injected for dependencies allowing to test the objects isolated.
+
+- UI Testing: There are a couple of tests. For more exhaustive testing more time would be requiered.
+The tests have to be run with the same simulator and ios version than the one used to take the reference screenshots.  
+iPhone 11 - iOS 15.2
+
+### Coverage
+
+![Coverage](coverage.png)

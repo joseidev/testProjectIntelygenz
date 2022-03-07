@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		451E9F1727D51914006B4581 /* InteligenzDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 451E9F1627D51914006B4581 /* InteligenzDomain */; };
+		451E9F2A27D601D0006B4581 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 451E9F2927D601D0006B4581 /* SnapshotTesting */; };
+		451E9F2D27D60223006B4581 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E9F2C27D60223006B4581 /* UITests.swift */; };
 		45DB903927D3CE9D004B5A3A /* Appview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903827D3CE9D004B5A3A /* Appview.swift */; };
 		45DB903B27D3CE9D004B5A3A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB903A27D3CE9D004B5A3A /* MainView.swift */; };
 		45DB903D27D3CEA0004B5A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DB903C27D3CEA0004B5A3A /* Assets.xcassets */; };
@@ -41,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		450BF0AD27D51890004FD533 /* InteligenzDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InteligenzDomain; sourceTree = "<group>"; };
+		451E9F2C27D60223006B4581 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		45DB903527D3CE9C004B5A3A /* TestProjectInteligenz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProjectInteligenz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DB903827D3CE9D004B5A3A /* Appview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appview.swift; sourceTree = "<group>"; };
 		45DB903A27D3CE9D004B5A3A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -78,12 +81,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451E9F2A27D601D0006B4581 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451E9F2B27D6020B006B4581 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				451E9F2C27D60223006B4581 /* UITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
 		45DB902C27D3CE9C004B5A3A = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +217,7 @@
 		45DB907227D50C86004B5A3A /* TestProjectInteligenzTests */ = {
 			isa = PBXGroup;
 			children = (
+				451E9F2B27D6020B006B4581 /* UITests */,
 				45DB907A27D50C92004B5A3A /* Mocks */,
 				45DB907327D50C86004B5A3A /* FetchNewsUseCaseTests.swift */,
 				45DB908127D51111004B5A3A /* MainViewModelTests.swift */,
@@ -262,6 +275,9 @@
 				45DB907627D50C86004B5A3A /* PBXTargetDependency */,
 			);
 			name = TestProjectInteligenzTests;
+			packageProductDependencies = (
+				451E9F2927D601D0006B4581 /* SnapshotTesting */,
+			);
 			productName = TestProjectInteligenzTests;
 			productReference = 45DB907127D50C86004B5A3A /* TestProjectInteligenzTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -297,6 +313,7 @@
 			packageReferences = (
 				45DB904A27D3D364004B5A3A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				45DB904D27D3D375004B5A3A /* XCRemoteSwiftPackageReference "servicesLibrary" */,
+				451E9F2627D6017D006B4581 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 45DB903627D3CE9C004B5A3A /* Products */;
 			projectDirPath = "";
@@ -349,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DB907427D50C86004B5A3A /* FetchNewsUseCaseTests.swift in Sources */,
+				451E9F2D27D60223006B4581 /* UITests.swift in Sources */,
 				45DB907C27D50CDC004B5A3A /* MockNewsAPIRepository.swift in Sources */,
 				45DB907E27D50DEF004B5A3A /* MockRepositoriesProvider.swift in Sources */,
 				45DB908027D50E6A004B5A3A /* MockFetchNewsUseCase.swift in Sources */,
@@ -606,6 +624,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		451E9F2627D6017D006B4581 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 		45DB904A27D3D364004B5A3A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -628,6 +654,11 @@
 		451E9F1627D51914006B4581 /* InteligenzDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InteligenzDomain;
+		};
+		451E9F2927D601D0006B4581 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 451E9F2627D6017D006B4581 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 		45DB904B27D3D364004B5A3A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

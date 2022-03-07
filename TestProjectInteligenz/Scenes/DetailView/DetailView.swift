@@ -19,6 +19,12 @@ struct DetailView: View {
                     .padding(.bottom, 8)
                 KFImage(article.urlToImage)
                     .cacheMemoryOnly()
+                    .placeholder {
+                        Image("newsPlaceholder")
+                            .resizable()
+                            .scaledToFit()                            
+                    }
+
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(10)
